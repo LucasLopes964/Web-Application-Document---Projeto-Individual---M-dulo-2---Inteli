@@ -128,29 +128,43 @@ Relações:
 
 1 Tarefa : N Notificações: Uma tarefa pode gerar várias notificações. (Notificacao.tarefa_id -> Tarefa.id)
 
+```sql
+-- Remove tabelas existentes em ordem correta de dependência
+DROP TABLE IF EXISTS Tarefa CASCADE;
+DROP TABLE IF EXISTS Disciplina CASCADE;
+DROP TABLE IF EXISTS Usuario CASCADE;
 
-**4. Tabela Material**
+-- Criação da tabela Usuario
+CREATE TABLE Usuario (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    data_cadastro TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
 
-Representa os materiais de estudo. (Baseado na entidade materiais da imagem, com o campo grupo_id removido conforme solicitado).
+-- Criação da tabela Disciplina
+CREATE TABLE Disciplina (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    usuario_id INT,
+    FOREIGN KEY (usuario_id) REFERENCES Usuario(id) ON DELETE CASCADE
+);
 
-Relações:
-
-1 Material : 1 Usuário (Uploader): Cada material é enviado por um usuário. (Material.usuario_id -> Usuario.id)
-
-1 Material : 1 Disciplina (Opcional): Um material pode ser associado a uma disciplina. (Material.disciplina_id -> Disciplina.id)
-
-
-**5. Tabela Notificacao**
-
-Representa as notificações do sistema. (Baseado na entidade notificacoes da imagem).
-
-Relações:
-
-1 Notificação : 1 Usuário (Destinatário): Cada notificação é destinada a um usuário. (Notificacao.usuario_id -> Usuario.id)
-
-1 Notificação : 1 Tarefa (Opcional): Uma notificação pode estar relacionada a uma tarefa específica. (Notificacao.tarefa_id -> Tarefa.id)
-
-
+-- Criação da tabela Tarefa
+CREATE TABLE Tarefa (
+    id SERIAL PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    data_entrega TIMESTAMP WITH TIME ZONE NOT NULL,
+    prioridade VARCHAR(10) CHECK (prioridade IN ('baixa', 'media', 'alta')) DEFAULT 'media',
+    status VARCHAR(10) CHECK (status IN ('pendente', 'concluido', 'atrasado')) DEFAULT 'pendente',
+    usuario_id INT NOT NULL,
+    disciplina_id INT,
+    FOREIGN KEY (usuario_id) REFERENCES Usuario(id) ON DELETE CASCADE,
+    FOREIGN KEY (disciplina_id) REFERENCES Disciplina(id) ON DELETE SET NULL
+);
+```
 ### 3.1.1 BD e Models (Semana 5)
 *Descreva aqui os Models implementados no sistema web*
 
