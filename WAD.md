@@ -85,6 +85,9 @@ T - Testável: Pode ser verificada através de testes de cadastro e listagem de 
 
 ### 3.1. Modelagem do banco de dados  (Semana 3)
 
+![2025-05-09 (3)](https://github.com/user-attachments/assets/996cf645-df74-4cd4-b274-f79c1267f56f)
+
+
 **1. Tabela Usuario**
 
 Representa os usuários do sistema. (Consolidado das entidades usuario e usuarios da imagem).
