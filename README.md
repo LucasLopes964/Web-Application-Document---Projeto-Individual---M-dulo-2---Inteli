@@ -16,9 +16,7 @@ Lucas Garcia Rodrigues Lopes
 <br>
 
 ## <a name="c1"></a>1. Introdução (Semana 01)
-O sistema HELP BROS é uma aplicação web de gerenciamento de tarefas acadêmicas feita para estudantes de faculdade. A aplicação web irá permitir que os estudantes se organizem, prazos e materiais de estudo em um único lugar, com categorias para cada disciplina, lembretes e compartilhamento de tarefas em grupos de estudo. O objetivo é ajudar os estudantes a melhorar sua organização, reduzindo o estresse causado pela sobrecarga de trabalhos e prazos.
-
----
+O sistema HELP BROS é uma aplicação web de gerenciamento de tarefas acadêmicas feita para estudantes de faculdade. A aplicação web irá permitir que os estudantes se organizem, prazos das atividades e provas em um único lugar, com notificações para não perder a data. O objetivo é ajudar os estudantes a melhorar sua organização, reduzindo o estresse causado pela sobrecarga de trabalhos e prazos.
 
 ## <a name="c2"></a>2. Visão Geral da Aplicação Web
 
@@ -44,8 +42,6 @@ Necessidades:
 
 Organizar tarefas e prazos 
 
-Compartilhar materiais com colegas
-
 Receber lembretes sobre entregas 
 
 
@@ -64,7 +60,7 @@ Solução: O sistema ajudará Ana Carolina a centralizar todas suas tarefas, com
 
 US01 | Como estudante universitário, quero cadastrar minhas tarefas acadêmicas com prazos e prioridades, para que eu possa me organizar melhor e cumprir os prazos.
 
-US02 | Como membro do grupo de estudos, quero compartilhar tarefas e materiais com meus colegas, para colaborar mais eficientemente nos trabalhos em equipe.
+US02 | Como membro do grupo de estudos, quero ter minhas tarefas com facil disponibilidade, para assim compartilhar tarefas e materiais com meus colegas, para colaborar mais eficientemente nos trabalhos em equipe.
 
 US03 | Como usuário do sistema, quero receber notificações sobre prazos próximos, para que eu não perca nenhuma entrega importante.
 
@@ -89,9 +85,68 @@ T - Testável: Pode ser verificada através de testes de cadastro e listagem de 
 
 ### 3.1. Modelagem do banco de dados  (Semana 3)
 
-*Posicione aqui os diagramas de modelos relacionais do seu banco de dados, apresentando todos os esquemas de tabelas e suas relações. Utilize texto para complementar suas explicações, se necessário.*
+**1. Tabela Usuario**
 
-*Posicione também o modelo físico com o Schema do BD (arquivo .sql)*
+Representa os usuários do sistema. (Consolidado das entidades usuario e usuarios da imagem).
+
+Relações:
+
+1 Usuário : N Disciplinas: Um usuário pode ter várias disciplinas. (Disciplina.usuario_id -> Usuario.id)
+
+1 Usuário : N Tarefas: Um usuário pode ter várias tarefas. (Tarefa.usuario_id -> Usuario.id)
+
+1 Usuário : N Materiais: Um usuário pode fazer upload de vários materiais. (Material.usuario_id -> Usuario.id)
+
+1 Usuário : N Notificações: Um usuário pode receber várias notificações. (Notificacao.usuario_id -> Usuario.id)
+
+
+**2. Tabela Disciplina**
+
+Representa as disciplinas ou matérias. (Consolidado das entidades disciplina e disciplinas da imagem, incluindo o campo codigo).
+
+Relações:
+
+1 Disciplina : 1 Usuário: Cada disciplina pertence a um usuário. (Disciplina.usuario_id -> Usuario.id)
+
+1 Disciplina : N Tarefas: Uma disciplina pode ter várias tarefas associadas. (Tarefa.disciplina_id -> Disciplina.id)
+
+1 Disciplina : N Materiais: Uma disciplina pode ter vários materiais associados. (Material.disciplina_id -> Disciplina.id)
+
+
+**3. Tabela Tarefa**
+
+Representa as tarefas a serem realizadas. (Consolidado das entidades tarefa e tarefas da imagem).
+
+Relações:
+
+1 Tarefa : 1 Usuário: Cada tarefa é associada a um usuário. (Tarefa.usuario_id -> Usuario.id)
+
+1 Tarefa : 1 Disciplina (Opcional): Uma tarefa pode ser associada a uma disciplina. (Tarefa.disciplina_id -> Disciplina.id)
+
+1 Tarefa : N Notificações: Uma tarefa pode gerar várias notificações. (Notificacao.tarefa_id -> Tarefa.id)
+
+
+**4. Tabela Material**
+
+Representa os materiais de estudo. (Baseado na entidade materiais da imagem, com o campo grupo_id removido conforme solicitado).
+
+Relações:
+
+1 Material : 1 Usuário (Uploader): Cada material é enviado por um usuário. (Material.usuario_id -> Usuario.id)
+
+1 Material : 1 Disciplina (Opcional): Um material pode ser associado a uma disciplina. (Material.disciplina_id -> Disciplina.id)
+
+
+**5. Tabela Notificacao**
+
+Representa as notificações do sistema. (Baseado na entidade notificacoes da imagem).
+
+Relações:
+
+1 Notificação : 1 Usuário (Destinatário): Cada notificação é destinada a um usuário. (Notificacao.usuario_id -> Usuario.id)
+
+1 Notificação : 1 Tarefa (Opcional): Uma notificação pode estar relacionada a uma tarefa específica. (Notificacao.tarefa_id -> Tarefa.id)
+
 
 ### 3.1.1 BD e Models (Semana 5)
 *Descreva aqui os Models implementados no sistema web*
