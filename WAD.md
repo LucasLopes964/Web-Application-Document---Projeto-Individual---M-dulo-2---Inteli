@@ -181,7 +181,9 @@ CREATE TABLE Tarefa (
 
 ### 3.3. Wireframes (Semana 03)
 
-*Posicione aqui as imagens do wireframe construído para sua solução e, opcionalmente, o link para acesso (mantenha o link sempre público para visualização).*
+
+![0279d928-1b5f-44d0-88a9-b98f17190094](https://github.com/user-attachments/assets/67afeb89-860c-44ac-92f8-42cf20542a3c)
+
 
 ### 3.4. Guia de estilos (Semana 05)
 
