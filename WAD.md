@@ -166,7 +166,57 @@ CREATE TABLE Tarefa (
 );
 ```
 ### 3.1.1 BD e Models (Semana 5)
-*Descreva aqui os Models implementados no sistema web*
+
+###  Usuario (`models/Usuario.js`)
+Representa os dados dos usuários cadastrados no sistema.
+
+**Atributos:**
+- `id`: Identificador único
+- `nome`: Nome do usuário
+- `email`: E-mail do usuário
+- `senha`: Senha do usuário
+
+**Métodos:**
+- `getAll()`: Retorna todos os usuários
+- `getById(id)`: Retorna um usuário específico pelo ID
+- `create(data)`: Cria um novo usuário
+- `update(id, data)`: Atualiza um usuário existente
+- `delete(id)`: Remove um usuário pelo ID
+
+---
+
+###  Tarefa (`models/Tarefa.js`)
+Gerencia as tarefas vinculadas aos usuários e disciplinas.
+
+**Atributos:**
+- `id`: Identificador da tarefa
+- `titulo`, `descricao`: Informações descritivas da tarefa
+- `data_entrega`, `prioridade`, `status`: Metadados da tarefa
+- `usuario_id`, `disciplina_id`: Relações com outras tabelas
+
+**Métodos:**
+- `getAll()`: Lista todas as tarefas
+- `getById(id)`: Retorna uma tarefa específica
+- `create(data)`: Insere uma nova tarefa
+- `update(id, data)`: Atualiza os dados de uma tarefa
+- `delete(id)`: Exclui uma tarefa
+
+---
+
+###  Disciplina (`models/Disciplina.js`)
+Responsável pelas disciplinas cadastradas no sistema.
+
+**Atributos:**
+- `id`: Identificador da disciplina
+- `nome`: Nome da disciplina
+- `usuario_id`: ID do usuário responsável
+
+**Métodos:**
+- `getAll()`: Lista todas as disciplinas
+- `getById(id)`: Retorna uma disciplina pelo ID
+- `create(data)`: Cria uma nova disciplina
+- `update(id, data)`: Atualiza os dados de uma disciplina
+- `delete(id)`: Remove uma disciplina do banco de dados
 
 ### 3.2. Arquitetura (Semana 5)
 
