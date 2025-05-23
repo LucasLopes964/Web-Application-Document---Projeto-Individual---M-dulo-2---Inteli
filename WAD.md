@@ -196,7 +196,35 @@ CREATE TABLE Tarefa (
 
 ### 3.6. WebAPI e endpoints (Semana 05)
 
-*Utilize um link para outra página de documentação contendo a descrição completa de cada endpoint. Ou descreva aqui cada endpoint criado para seu sistema.*  
+##  Usuários (`/api/usuarios`)
+
+| Método | Rota                | Descrição                                 |
+|--------|---------------------|-------------------------------------------|
+| GET    | `/api/usuarios`     | Lista todos os usuários                   |
+| GET    | `/api/usuarios/:id` | Busca um usuário pelo ID                  |
+| POST   | `/api/usuarios`     | Cria um novo usuário                      |
+| PUT    | `/api/usuarios/:id` | Atualiza os dados de um usuário existente |
+| DELETE | `/api/usuarios/:id` | Exclui um usuário                         |
+
+##  Tarefas (`/api/tarefas`)
+
+| Método | Rota                | Descrição                          |
+|--------|---------------------|------------------------------------|
+| GET    | `/api/tarefas`      | Lista todas as tarefas             |
+| GET    | `/api/tarefas/:id`  | Busca uma tarefa pelo ID           |
+| POST   | `/api/tarefas`      | Cria uma nova tarefa               |
+| PUT    | `/api/tarefas/:id`  | Atualiza uma tarefa existente      |
+| DELETE | `/api/tarefas/:id`  | Exclui uma tarefa                  |
+
+##  Disciplinas (`/api/disciplinas`)
+
+| Método | Rota                     | Descrição                                     |
+|--------|--------------------------|-----------------------------------------------|
+| GET    | `/api/disciplinas`       | Lista todas as disciplinas                    |
+| POST   | `/api/disciplinas`       | Cria uma nova disciplina                      |
+| PUT    | `/api/disciplinas/:id`   | Atualiza os dados de uma disciplina existente |
+| DELETE | `/api/disciplinas/:id`   | Exclui uma disciplina                         |
+
 
 ### 3.7 Interface e Navegação (Semana 07)
 
