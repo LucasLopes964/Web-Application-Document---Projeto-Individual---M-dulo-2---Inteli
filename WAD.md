@@ -237,13 +237,73 @@ Responsável pelas disciplinas cadastradas no sistema.
 
 ### 3.4. Guia de estilos (Semana 05)
 
-*Descreva aqui orientações gerais para o leitor sobre como utilizar os componentes do guia de estilos de sua solução.*
+## 🎨 Cores
+
+Use as **cores primárias** (ex.: azul claro e roxo) para botões principais, links e elementos de destaque.
+
+As **cores secundárias** e **tons neutros** devem ser utilizadas em planos de fundo, áreas secundárias e texto descritivo.
+
+**Cores de alerta** (vermelho, amarelo, verde) devem ser usadas com propósito:
+
+- 🔴 **Vermelho** → Avisos importantes  
+- ✅ **Verde** → Tarefas a fazer
+
+---
+
+## 🔠 Tipografia
+
+Utilize sempre a **fonte padrão** definida no guia (ex.: *Poppins* ou *Roboto*).
+
+Títulos devem seguir a hierarquia tipográfica (H1, H2, H3…) conforme o uso:
+
+- `heading`: Títulos de páginas  
+- `Bold`: Seções  
+- `Hbody strong`: Subtítulos ou blocos internos  
+
+Parágrafos e descrições devem utilizar peso de fonte **leve/médio** para boa leitura.
+
+---
+
+## 🔘 Botões
+
+- Botões principais (ação) devem usar a **cor primária** e estar bem visíveis.
+- Botões secundários devem ser **discretos** (borda ou cor neutra).
+- Mantenha **bordas arredondadas** e **espaçamento consistente** entre ícones e texto.
+- Evite sobrecarregar com muitos botões próximos — priorize ações principais.
+
+---
+
+## 🧾 Cards (Tarefas e Disciplinas)
+
+- Tarefas e disciplinas devem ser apresentadas em **cards** com **sombra leve** e **bordas arredondadas**.
+- Os cards devem exibir as informações essenciais: **título, data, status, prioridade**.
+
+---
+
+## 🧩 Ícones e Elementos Visuais
+
+- Use **ícones semânticos**, ou seja, que representem a função com clareza.
+- Mantenha o estilo dos ícones **consistente** (mesmo conjunto ou biblioteca).
+- Ícones com ação (editar, excluir, concluir) devem ter **feedback visual** ao toque.
+
+---
+
+## 📱 Responsividade
+
+- Todos os componentes devem se **adaptar a diferentes tamanhos de tela** (mobile, tablet, desktop).
+- Utilize **breakpoints definidos no guia** para ajustar margens, espaçamentos e tamanhos de fonte conforme o dispositivo.
+
+---
+
+## 🔔 Notificações e Alertas
+
+Mensagens de notificação devem usar **cores e ícones adequados ao contexto** (erro, sucesso, aviso).
 
 
 ### 3.5. Protótipo de alta fidelidade (Semana 05)
+![2025-05-24 (13)](https://github.com/user-attachments/assets/e7e00497-08c5-4c62-86d3-a26984bd0139)
 
-*Posicione aqui algumas imagens demonstrativas de seu protótipo de alta fidelidade e o link para acesso ao protótipo completo (mantenha o link sempre público para visualização).*
-
+https://www.figma.com/proto/jkphC9tfElclW6aprprlO9/Prot%C3%B3tipo---Projeto-Individual?node-id=6-156&t=2sBIHfeph8Eexp3s-1
 ### 3.6. WebAPI e endpoints (Semana 05)
 
 ##  Usuários (`/api/usuarios`)
