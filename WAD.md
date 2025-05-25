@@ -302,6 +302,8 @@ Mensagens de notificação devem usar **cores e ícones adequados ao contexto** 
 
 ### 3.5. Protótipo de alta fidelidade (Semana 05)
 ![2025-05-24 (13)](https://github.com/user-attachments/assets/e7e00497-08c5-4c62-86d3-a26984bd0139)
+![2025-05-25](https://github.com/user-attachments/assets/866e5d21-f03b-4759-8783-0cd0dab71ca2)
+
 
 https://www.figma.com/proto/jkphC9tfElclW6aprprlO9/Prot%C3%B3tipo---Projeto-Individual?node-id=6-156&t=2sBIHfeph8Eexp3s-1
 ### 3.6. WebAPI e endpoints (Semana 05)
