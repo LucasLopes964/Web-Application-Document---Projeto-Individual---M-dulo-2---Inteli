@@ -351,7 +351,7 @@ Usuário informa **nome** e **e-mail** para acessar o sistema.
 ## 📋 Tela de Lista de Tarefas
 
  <img src= "./mvc/assets/listatarefa.png">
-Mostra todas as tarefas com **título**, **descrição** e opção de **excluir**.  
+Mostra todas as tarefas com título, descrição e opção de excluir.  
 Há também um botão para **criar nova tarefa**.
 
 ---
@@ -361,22 +361,6 @@ Há também um botão para **criar nova tarefa**.
  <img src= "./mvc/assets/criartarefa.png">
  
 Formulário para o usuário inserir o **título** e **descrição** da nova tarefa.
-
----
-
-## 🚀 Tecnologias Usadas
-
-- Node.js
-- Express
-- EJS
-- HTML + CSS
-
----
-
-## 📁 Estrutura do Projeto
-
-
-
 
 
 ## <a name="c4"></a>4. Desenvolvimento da Aplicação Web (Semana 8)
