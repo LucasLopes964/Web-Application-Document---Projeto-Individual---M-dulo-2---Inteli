@@ -336,35 +336,47 @@ https://www.figma.com/proto/jkphC9tfElclW6aprprlO9/Prot%C3%B3tipo---Projeto-Indi
 
 # 💻 Sistema de Gerenciamento de Tarefas
 
-Aplicação web simples que permite aos usuários gerenciar tarefas com funcionalidades de login, visualização, criação e exclusão de tarefas. Desenvolvido com **Node.js**, **Express** e **EJS**.
+Aplicação web que permite gerenciar tarefas com funcionalidades de login, criação, listagem e exclusão.
 
 ---
 
 ## 🔐 Tela de Login
 
-<img src="assets/login.png" alt="Tela de Login" width="600"/>
+![Tela de Login](assets/login.png)
 
-Permite que o usuário acesse o sistema informando **nome** e **e-mail**.  
-O layout é centralizado, com campos de entrada estilizados e botão de acesso destacado.
+Usuário informa **nome** e **e-mail** para acessar o sistema.
 
 ---
 
 ## 📋 Tela de Lista de Tarefas
 
-<img src="assets/lista-tarefas.png" alt="Lista de Tarefas" width="600"/>
+![Tela de Lista de Tarefas](assets/listatarefa.png)
 
-Exibe todas as tarefas cadastradas em uma **lista organizada**.  
-Cada tarefa apresenta **título**, **descrição** e um **botão para exclusão**.  
-Há também um botão visível para **criar novas tarefas**.
+Mostra todas as tarefas com **título**, **descrição** e opção de **excluir**.  
+Há também um botão para **criar nova tarefa**.
 
 ---
 
 ## 📝 Tela de Criação de Tarefas
 
-<img src="assets/criar-tarefa.png" alt="Criar Tarefa" width="600"/>
+![Tela de Criação de Tarefas](assets/criartarefa.png)
 
-Permite ao usuário cadastrar uma nova tarefa, informando **título** e **descrição**.  
-O formulário é simples, objetivo e segue o **padrão visual** das demais telas.
+Formulário para o usuário inserir o **título** e **descrição** da nova tarefa.
+
+---
+
+## 🚀 Tecnologias Usadas
+
+- Node.js
+- Express
+- EJS
+- HTML + CSS
+
+---
+
+## 📁 Estrutura do Projeto
+
+
 
 
 
