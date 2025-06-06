@@ -342,7 +342,7 @@ Aplicação web que permite gerenciar tarefas com funcionalidades de login, cria
 
 ## 🔐 Tela de Login
 
- <img src= "./assets/login.png">
+ <img src= "./mvc/assets/login.png">
 
 Usuário informa **nome** e **e-mail** para acessar o sistema.
 
