@@ -334,9 +334,39 @@ https://www.figma.com/proto/jkphC9tfElclW6aprprlO9/Prot%C3%B3tipo---Projeto-Indi
 
 ### 3.7 Interface e Navegação (Semana 07)
 
-*Descreva e ilustre aqui o desenvolvimento do frontend do sistema web, explicando brevemente o que foi entregue em termos de código e sistema. Utilize prints de tela para ilustrar.*
+# 💻 Sistema de Gerenciamento de Tarefas
+
+Aplicação web simples que permite aos usuários gerenciar tarefas com funcionalidades de login, visualização, criação e exclusão de tarefas. Desenvolvido com **Node.js**, **Express** e **EJS**.
 
 ---
+
+## 🔐 Tela de Login
+
+<img src="assets/login.png" alt="Tela de Login" width="600"/>
+
+Permite que o usuário acesse o sistema informando **nome** e **e-mail**.  
+O layout é centralizado, com campos de entrada estilizados e botão de acesso destacado.
+
+---
+
+## 📋 Tela de Lista de Tarefas
+
+<img src="assets/lista-tarefas.png" alt="Lista de Tarefas" width="600"/>
+
+Exibe todas as tarefas cadastradas em uma **lista organizada**.  
+Cada tarefa apresenta **título**, **descrição** e um **botão para exclusão**.  
+Há também um botão visível para **criar novas tarefas**.
+
+---
+
+## 📝 Tela de Criação de Tarefas
+
+<img src="assets/criar-tarefa.png" alt="Criar Tarefa" width="600"/>
+
+Permite ao usuário cadastrar uma nova tarefa, informando **título** e **descrição**.  
+O formulário é simples, objetivo e segue o **padrão visual** das demais telas.
+
+
 
 ## <a name="c4"></a>4. Desenvolvimento da Aplicação Web (Semana 8)
 
