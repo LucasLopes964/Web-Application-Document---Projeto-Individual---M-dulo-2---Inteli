@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Tarefas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #a8bddc;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .tarefa-container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    .botao-nova-tarefa {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 15px;
+      background: #28a745;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .botao-nova-tarefa:hover {
+      background: #218838;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    .titulo {
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .descricao {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="tarefa-container">
+    <h1>Lista de Tarefas</h1>
+
+    <!-- Botão para ir à tela de criação -->
+    <a href="/tarefas/nova" class="botao-nova-tarefa">+ Criar Nova Tarefa</a>
+
+    <!-- Lista de Tarefas -->
+    <ul>
+      <% if (tarefas.length > 0) { %>
+        <% tarefas.forEach(function(tarefa, index) { %>
+          <li>
+            <span class="titulo"><%= tarefa.titulo %></span><br>
+            <span class="descricao"><%= tarefa.descricao %></span>
+            <form action="/tarefas/<%= index %>?_method=DELETE" method="POST" style="display:inline;">
+              <button type="submit" style="margin-left:10px; background:#dc3545; color:#fff; border:none; border-radius:4px; padding:4px 8px; cursor:pointer;">
+                Excluir
+              </button>
+            </form>
+          </li>
+        <% }) %>
+      <% } else { %>
+        <li>Nenhuma tarefa cadastrada.</li>
+      <% } %>
+    </ul>
+  </div>
+
+  <!-- Inclusão do método override -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/method-override/2.3.10/method-override.min.js"></script>
+  <script>
+    const methodOverride = require('method-override');
+    app.use(methodOverride('_method'));
+  </script>
+</body>
+</html>
