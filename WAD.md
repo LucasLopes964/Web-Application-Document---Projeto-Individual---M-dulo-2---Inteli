@@ -350,8 +350,7 @@ Usuário informa **nome** e **e-mail** para acessar o sistema.
 
 ## 📋 Tela de Lista de Tarefas
 
-![Tela de Lista de Tarefas](assets/listatarefa.png)
-
+ <img src= "./mvc/assets/listatarefa.png">
 Mostra todas as tarefas com **título**, **descrição** e opção de **excluir**.  
 Há também um botão para **criar nova tarefa**.
 
@@ -359,8 +358,8 @@ Há também um botão para **criar nova tarefa**.
 
 ## 📝 Tela de Criação de Tarefas
 
-![Tela de Criação de Tarefas](assets/criartarefa.png)
-
+ <img src= "./mvc/assets/criartarefa.png">
+ 
 Formulário para o usuário inserir o **título** e **descrição** da nova tarefa.
 
 ---
